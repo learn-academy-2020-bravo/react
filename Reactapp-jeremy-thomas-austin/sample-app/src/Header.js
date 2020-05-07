@@ -6,7 +6,7 @@ class Header extends Component {
   render (){
     return(
       <>
-        <p> About us </p>
+        <h1> Top 5 Favorite Superlatives </h1>
       </>
     )
   }
