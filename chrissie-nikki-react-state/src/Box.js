@@ -6,7 +6,9 @@ class Box extends Component{
     super(props)
       this.state = {
         colorNames: ["green", "blue", "purple", "red", "yellow", "orange"],
-        currentColor: " "
+      
+        currentColor:""
+
       }
   }
   chooseRandomColor = ( ) => {
@@ -16,7 +18,10 @@ class Box extends Component{
   render () {
     return (
       <>
-      <button onClick = {this.chooseRandomColor}>BOX</button>
+      <button onClick = {this.chooseRandomColor}>{this.colorNames}
+
+      </button>
+      { this.state.currentColor}
       </>
     )
   }
