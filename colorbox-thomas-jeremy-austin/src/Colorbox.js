@@ -19,7 +19,7 @@ class Colorbox extends Component {
   render () {
     return (
         <>
-          <div class = "white-box" onClick = {this.handleChange} style = `background-color: ${this.state.currentColor}`>
+          <div className = {`${this.state.currentColor} box`} onClick = {this.handleChange} >
             <p>{this.state.currentColor}</p>
           </div>
         </>

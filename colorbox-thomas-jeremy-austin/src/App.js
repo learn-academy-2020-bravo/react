@@ -7,6 +7,27 @@ class App extends Component {
     return (
         <>
           < Colorbox />
+          < Colorbox />
+          < Colorbox />
+          < Colorbox />
+          < Colorbox />
+          < Colorbox />
+          < Colorbox />
+          < Colorbox />
+          < Colorbox />
+          < Colorbox />
+          < Colorbox />
+          < Colorbox />
+          < Colorbox />
+          < Colorbox />
+          < Colorbox />
+          < Colorbox />
+          < Colorbox />
+          < Colorbox />
+          < Colorbox />
+          < Colorbox />
+          <div> press button to add box </div>
+          <div> press button to remove box </div>
         </>
     );
   }
