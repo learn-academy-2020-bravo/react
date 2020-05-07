@@ -6,7 +6,14 @@ class Content extends Component {
   render(){
     return(
       <>
-      <p>Nikki and Chrissie are two of the most amazing people you will ever meet.</p>
+      <ol>
+        <li>frozen 2</li>
+        <li>lion king</li>
+        <li>fox and the hound</li>
+        <li>coco</li>
+        <li>inside out</li>
+      </ol>
+
       </>
     )
   }
