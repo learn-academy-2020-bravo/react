@@ -16,11 +16,9 @@ class Lightswitch extends Component {
   handleChange = () => {
     if(this.state.switchImage === ONswitch) {
       this.setState({switchImage: Offswitch})
-
     }
     else {
       this.setState({switchImage: ONswitch})
-
     }
   }
 
@@ -29,7 +27,9 @@ class Lightswitch extends Component {
   render(){
     return(
       <>
-        //<img src = {this.state.switchImage} onClick = {this.handleChange}/>
+        <div className = "SWITCH">
+          <img src = {this.state.switchImage} onClick = {this.handleChange}/>
+        <div/>
       </>
     )
   }
