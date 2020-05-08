@@ -6,22 +6,25 @@ class Box extends Component{
     super(props)
       this.state = {
         colorNames: ["green", "blue", "purple", "red", "yellow", "orange"],
-      
-        currentColor:""
+        currentColor: ""
 
       }
   }
-  chooseRandomColor = ( ) => {
-    let randomColor = Math.floor(Math.random()*6)
-    this.setState({currentColor:this.state.colorNames[randomColor]})
+  chooseRandomColor = () => {
+    let randomColor = Math.floor(Math.random() * 6)
+    this.setState({currentColor: this.state.colorNames[randomColor]})
   }
+  
   render () {
     return (
       <>
-      <button onClick = {this.chooseRandomColor}>{this.colorNames}
+      <div id ="box" onClick = {this.chooseRandomColor}  style = {{backgroundColor: this.state.currentColor}}>
+        <p>
+          { this.state.currentColor }
+        </p>
 
-      </button>
-      { this.state.currentColor}
+      </div>
+      
       </>
     )
   }
