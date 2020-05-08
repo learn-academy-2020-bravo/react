@@ -20,11 +20,13 @@ class App extends Component {
 
   render() {
     return (
-        <>
-          <div> { this.state.colorArray } </div>
-          <button onClick={ this.addColorBox}> press button to add box </button>
-          <button onClick={ this.deleteColorBox }> press button to remove box </button>
-        </>
+      <>
+        <div className= "buttonContainer">
+            <button className= "button" onClick={ this.addColorBox}> press button to add box    </button>
+            <button className= "button" onClick={ this.deleteColorBox }> press button to remove box </button>
+          </div>
+        <div> {this.state.colorArray } </div>
+      </>
     );
   }
 }

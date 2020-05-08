@@ -13,6 +13,20 @@
   }
 }
 
+.buttonContainer {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+}
+
+.button{
+  height: 5em;
+  width:  20em;
+  border-style: groove;
+  border-radius: 20px;
+  justify-content: center;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
