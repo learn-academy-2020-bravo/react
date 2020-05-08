@@ -11,7 +11,7 @@ class App extends Component {
     }
 
   addColorBox = () => {
-    this.setState({colorArray: [...this.state.colorArray,< Colorbox />]})
+    this.setState({colorArray: [...this.state.colorArray, < Colorbox />]})
   }
 
   deleteColorBox = () => {
@@ -22,8 +22,8 @@ class App extends Component {
     return (
       <>
         <div className= "buttonContainer">
-            <button className= "button" onClick={ this.addColorBox}> press button to add box    </button>
-            <button className= "button" onClick={ this.deleteColorBox }> press button to remove box </button>
+            <button className= "button" onClick={ this.addColorBox}> Press button to add box.    </button>
+            <button className= "button" onClick={ this.deleteColorBox }> Press button to remove box. </button>
           </div>
         <div> {this.state.colorArray } </div>
       </>

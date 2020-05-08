@@ -5,7 +5,7 @@ class Colorbox extends Component {
   constructor(props)  {
     super(props)
       this.state = {
-        colors: ["green", "blue", "yellow", "red", "purple", "orange"],
+        colors: ["Green", "Blue", "Yellow", "Red", "Purple", "Orange"],
         currentColor: ""
       }
   }

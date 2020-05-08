@@ -20,11 +20,13 @@
 }
 
 .button{
-  height: 5em;
-  width:  20em;
+  height: 8em;
+  width:  24em;
   border-style: groove;
   border-radius: 20px;
   justify-content: center;
+  margin: 20px;
+  cursor: pointer;
 }
 
 .App-header {
@@ -49,23 +51,32 @@
     margin-top:50px;
     margin-left:auto;
     margin-right:auto;
+    font-weight: bold;
+    font-family: monospace;
+    font-size-adjust: auto;
+    font-size: 70px;
+    text-decoration-style: wavy;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
-.yellow{
+.Yellow{
   background-color: yellow;
 }
-.green {
+.Green {
   background-color: green;
 }
-.blue {
+.Blue {
   background-color: blue;
 }
-.red {
+.Red {
   background-color: red;
 }
-.purple {
+.Purple {
   background-color: purple;
 }
-.orange {
+.Orange {
   background-color: orange;
 }
 body{
