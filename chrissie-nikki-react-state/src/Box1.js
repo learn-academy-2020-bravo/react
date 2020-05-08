@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 
-class Box extends Component{
+class Box1 extends Component{
   constructor(props){
     super(props)
       this.state = {
@@ -9,23 +9,21 @@ class Box extends Component{
         currentColor: ""
 
       }
-  }
+    }
   
   chooseRandomColor = () => {
     let randomColor = Math.floor(Math.random() * 6)
-      this.setState({currentColor: this.state.colorNames[randomColor]})
-      }
-
+    this.setState({currentColor: this.state.colorNames[randomColor]})
+  }
+      
 
   
   render () {
     return (
       <>
-      <div id = "box" onClick = {this.chooseRandomColor}  style = {{backgroundColor: this.state.currentColor}}>
-        <h5>CLICK Me</h5>
+      <div  id ="box1" onClick = {this.chooseRandomColor}  style = {{backgroundColor: this.state.currentColor}}>
         <p>
           { this.state.currentColor }
-          
         </p>
 
       </div>
@@ -33,6 +31,7 @@ class Box extends Component{
       </>
     )
   }
-
 }
-export default Box;
+
+
+export default Box1;
