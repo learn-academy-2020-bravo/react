@@ -1,40 +1,44 @@
 import React, { Component } from 'react';
 import './App.css';
+import LightBulbOn from "./images/lightbulbyellow.jpg"
+import LightBulbOff from "./images/offlightbulb.jpg"
+import LightSwitchOn from "./images/lightswitchon.png"
+import LightSwitchOff from "./images/lightswitchoff.png"
 
 class Lightbulb extends Component {
     constructor (props) {
       super(props)
       this.state = {
-
-        lightArray: ["white", "yellow"],
-        onOff: " "
+        isLightOn: false,
+        lightArray: "yellow",
+        onOff: "on",
+        pictureOfSwitch:LightSwitchOn ,
+        pictureOfBulb: LightBulbOn ,
       }
     }
     handleChange = () => {
-    //   let lightVar = () =>
-    //  if [0] => add 1 store value
-    // if [1] => subtract 1 store value
-    // return 
-    //   }
-      let off = this.state.lightArray[0]
 
-      let on = this.state.lightArray[1]
-      if(off == "white") {
-        this.setState({onOff: this.state.lightArray[1]})
-      } else if(on == "yellow") {
-        this.setState({onOff: this.state.lightArray[0]})
+
+      if (this.state.isLightOn == true) {
+        this.setState({isLightOn:false, onOff: "off", lightArray:"white", pictureOfBulb: LightBulbOff, pictureOfSwitch: LightSwitchOff})
+
       }
+      else if (this.state.isLightOn == false) {
+        this.setState({isLightOn:true, onOff: "on", lightArray:"yellow", pictureOfBulb: LightBulbOn, pictureOfSwitch:LightSwitchOn })
+      }
+
     }
 
     render () {
       return(
         <>
-          <div onClick= { this.handleChange} class = "box" style = {{backgroundColor: this.state.onOff}}>
 
-            <button  className= "off button"> off
-            </button>
-            {/* <button  className= "on button"> on
-            </button> */}
+          <div className="button"  style = {{backgroundColor: this.state.lightArray}}>
+            <img src= {this.state.pictureOfBulb} className= "bulb"/>
+            <br/>
+            <img src= {this.state.pictureOfSwitch}   onClick= { this.handleChange} className= "switch"/>
+
+
           </div>
 
         </>
