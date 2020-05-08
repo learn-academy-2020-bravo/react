@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Lightbulb form './Lightbulb.js'
+import Lightbulb from './Lightbulb.js'
 
 
 
@@ -9,11 +9,13 @@ class App extends Component {
 
 
   render() {
-    return
+    return(
       <>
-        < lightbulb />
+
+
+        < Lightbulb />
       </>
-  );
+  )
 }
 }
 

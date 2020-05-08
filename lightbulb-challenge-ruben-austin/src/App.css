@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+.button{
+width: 400px;
+height: 100px;
+border-radius: 20px;
+display: flex;
+justify-content: center;
+border-style: ridge;
+border-width: thick;
+}
+
+.on{
+  background-color: yellow;
+}
+
+.off {
+  background-color: white;
+}
