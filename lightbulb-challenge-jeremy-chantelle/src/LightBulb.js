@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+import offLight from './images/lightBulbOffDark.png'
+import onLight from './images/lightBulbOn.png'
+import offSwitch from './images/lightSwitchOff.png'
+import onSwitch from './images/lightSwitchOn.png'
 import './App.css';
 
 class LightBulb extends Component {
@@ -6,8 +10,9 @@ class LightBulb extends Component {
     super(props)
       this.state = {
         lightOn: false,
-        lightStatus: "",
-        lightColor: ""
+        lightSwitchStatus: offSwitch,
+        lightColor: offLight,
+        backColor: "black"
       }
   }
 
@@ -15,29 +20,32 @@ class LightBulb extends Component {
     if (this.state.lightOn === false) {
       this.setState({
         lightOn: true,
-        lightStatus: "ON",
-        lightColor: "yellow"
+        lightSwitchStatus: onSwitch,
+        lightColor: onLight,
+        backColor: "gray"
       })
     } else {
       this.setState({
         lightOn: false,
-        lightStatus: "OFF",
-        lightColor: "white"
+        lightSwitchStatus: offSwitch,
+        lightColor: offLight,
+        backColor: "black"
       })
     }
   }
 
   render() {
-    let { lightStatus } = this.state
+    let { lightSwitchStatus } = this.state
     let { lightColor } = this.state
+    let { backColor } = this.state
     return(
       <>
         <div
-        class = "light"
-        onClick = { this.lightSwitch }
-        style = {{ backgroundColor: lightColor }}
+        class = "lightswitch"         
+        style = {{ backgroundColor: backColor }}
         >
-          <p>{ lightStatus }</p>
+          <img src = { lightSwitchStatus } onClick = { this.lightSwitch } class = "switch"/>
+          <img src ={ lightColor } class = "bulb"/>
         </div>
       </>
     )
