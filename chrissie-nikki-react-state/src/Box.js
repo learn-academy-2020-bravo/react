@@ -22,7 +22,7 @@ class Box extends Component{
     return (
       <>
       <div id = "box" onClick = {this.chooseRandomColor}  style = {{backgroundColor: this.state.currentColor}}>
-        <h5>CLICK Me</h5>
+        
         <p>
           { this.state.currentColor }
           
