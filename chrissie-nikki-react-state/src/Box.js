@@ -18,9 +18,9 @@ class Box extends Component{
   render () {
     return (
       <>
-      <div id ="box" onClick = {this.chooseRandomColor}>
+      <div id ="box" onClick = {this.chooseRandomColor}  style = {{backgroundColor: this.state.currentColor}}>
         <p>
-          {this.state.currentColor}
+          { this.state.currentColor }
         </p>
 
       </div>
