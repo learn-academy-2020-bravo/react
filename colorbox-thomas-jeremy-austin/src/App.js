@@ -11,24 +11,17 @@ class App extends Component {
     }
 
   addColorBox = () => {
-    this.setState({ colorArray: this.state.colorArray.push( < Colorbox />)})
+    this.setState({colorArray: [...this.state.colorArray,< Colorbox />]})
   }
 
   deleteColorBox = () => {
-
+    this.setState({ colorArray: this.state.colorArray.slice(0,this.state.colorArray.length - 1)})
   }
-
-  // handleChange(e) {
-  //   this.setState({
-  //
-  //   })
-  // }
 
   render() {
     return (
         <>
-          < Colorbox />
-          <div> { this.state.colorArray.map(element=>element)} </div>
+          <div> { this.state.colorArray } </div>
           <button onClick={ this.addColorBox}> press button to add box </button>
           <button onClick={ this.deleteColorBox }> press button to remove box </button>
         </>

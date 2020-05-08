@@ -37,25 +37,25 @@
     margin-right:auto;
 }
 .yellow{
-  background-color: yellow
+  background-color: yellow;
 }
 .green {
-  background-color: green
+  background-color: green;
 }
 .blue {
-  background-color:  blue
+  background-color: blue;
 }
 .red {
-  background-color: red
+  background-color: red;
 }
 .purple {
-  background-color: purple
+  background-color: purple;
 }
 .orange {
-  background-color: orange
+  background-color: orange;
 }
 body{
-  background-color:black;
+  background-color: black;
 }
 
 @keyframes App-logo-spin {
