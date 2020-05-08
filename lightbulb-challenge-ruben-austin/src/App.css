@@ -36,7 +36,7 @@
     transform: rotate(360deg);
   }
 }
-.button{
+/* .button{
 width: 400px;
 height: 100px;
 border-radius: 20px;
@@ -52,4 +52,9 @@ border-width: thick;
 
 .off {
   background-color: white;
+} */
+
+.box {
+  width: 400px;
+  height: 400px;
 }
