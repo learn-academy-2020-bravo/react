@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import './App.css';
 import OFFbulb from './images/OFFbulb.jpg'
 import ONbulb from './images/ONbulb.jpg'
+import Offswitch from './images/Offswitch.jpeg'
+import ONswitch from './images/ONswitch.jpg'
+
 
 
 class Lightbulb extends Component {
@@ -10,38 +13,32 @@ class Lightbulb extends Component {
     this.state = {
       switch:"OFF",
       lights:"white",
-      OFFbulb: OFFbulb,
-      ONbulb: ONbulb
-
+      bulbImage: OFFbulb,
+      switchImage: Offswitch
     }
   }
 
   handleChange = () => {
-    if(this.state.switch === "OFF") {
+    if(this.state.bulbImage === ONbulb) {
+      this.setState({bulbImage: OFFbulb})
+      this.setState({switchImage: Offswitch})
 
-      this.setState({switch: "ON"})
-      this.setState({lights: "yellow"})
     }
     else {
-      this.setState({switch: "OFF"})
-      this.setState({lights: "white"})
+      this.setState({bulbImage: ONbulb})
+      this.setState({switchImage: ONswitch})
     }
-
   }
 
 
 
   render(){
-    // console.log("render", this.state.switch);
     return(
       <>
         <div id="square" style = {{backgroundColor: this.state.lights}} onClick = {this.handleChange}>
-        <p>{this.state.switch}</p>
-        <img src = {this.state.OFFbulb}/>
-        <img src = {this.state.ONbulb}/>
-
-
-
+          <p>{this.state.switch}</p>
+          <img src = {this.state.bulbImage}/>
+          <img src = {this.state.switchImage}/>
         </div>
       </>
     )
