@@ -5,7 +5,7 @@ import './App.css';
 
 class App extends Component {
   constructor (props){
-    super(props) 
+    super(props)
       this.state = {
         switchArray : []
       }
@@ -23,16 +23,17 @@ removingLights = () => {
     return(
       <>
         <h1>Are You Afraid of the Dark?</h1>
-        <div id="buttons">
-          <button onClick = {this.addingLights}>Add More Light</button>
-          <button onClick = {this.removingLights}>Less Light</button>
-
+        <div id="button1">
+          <button onClick = {this.addingLights}>More Light Switches</button>
+        </div>
+        <div id="button2">
+          <button onClick = {this.removingLights}>Less Light Switches</button>
         </div>
         < LightBulb />
         <div>
           {this.state.switchArray}
         </div>
-        <p> Jeremy and Chantelle made this. And we're not afraid of the dark.</p>
+        <p class="footer"> Jeremy and Chantelle made this. And we're not afraid of the dark.</p>
       </>
     )
   }
