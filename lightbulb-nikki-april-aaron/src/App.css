@@ -8,7 +8,7 @@
   pointer-events: none;
 }
 
-#box {  background-color: blue;  height: 300px;  width: 300px; border-color: black;  border-width: 20px;  margin: 0 auto;} 
+#box {  background-color: yellow;  height: 300px;  width: 300px; border-color: black;  border-width: 20px;  margin: 0 auto;} 
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

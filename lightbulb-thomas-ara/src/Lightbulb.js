@@ -5,22 +5,18 @@ import ONbulb from './images/ONbulb.jpg'
 import Offswitch from './images/OFFswitch.jpg'
 import ONswitch from './images/ONswitch.jpg'
 
-
 class Lightbulb extends Component {
   constructor(props) {
     super(props)
     this.state = {
-
       lights:"white",
       bulbImage: OFFbulb,
       bulbClass: 'bulbOff',
       switchImage: Offswitch
-
     }
   }
 
   handleChange = () => {
-
     if(this.state.bulbImage === ONbulb) {
       this.setState({bulbImage: OFFbulb, switchImage: Offswitch, bulbClass: 'bulbOff'})
 

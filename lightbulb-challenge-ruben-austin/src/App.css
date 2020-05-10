@@ -36,7 +36,7 @@
     transform: rotate(360deg);
   }
 }
-/* .button{
+/*.button{
 width: 400px;
 height: 100px;
 border-radius: 20px;
@@ -45,16 +45,29 @@ justify-content: center;
 border-style: ridge;
 border-width: thick;
 }
+*/
+.switch{
+
+}
+.bulb{
+height: 1300px;
+width:900px;
+}
 
 .on{
+
+
   background-color: yellow;
 }
 
 .off {
+
   background-color: white;
-} */
+}
 
 .box {
+    border: 2px solid black;
+    border-radius: 20px;
   width: 400px;
   height: 400px;
 }
