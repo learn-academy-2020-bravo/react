@@ -17,6 +17,8 @@ class Lightbulb extends Component {
   }
 
   handleChange = () => {
+    // let parent know that bulb state changed, so we can toggle fireworks YO
+    this.props.bulbHandler()
     if(this.state.bulbImage === ONbulb) {
       this.setState({bulbImage: OFFbulb, switchImage: Offswitch, bulbClass: 'bulbOff'})
 
