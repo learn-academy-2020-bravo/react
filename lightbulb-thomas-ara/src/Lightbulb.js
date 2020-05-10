@@ -6,20 +6,21 @@ import Offswitch from './images/OFFswitch.jpg'
 import ONswitch from './images/ONswitch.jpg'
 
 
-
 class Lightbulb extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      // switch:"OFF",
+
       lights:"white",
       bulbImage: OFFbulb,
       bulbClass: 'bulbOff',
       switchImage: Offswitch
+
     }
   }
 
   handleChange = () => {
+
     if(this.state.bulbImage === ONbulb) {
       this.setState({bulbImage: OFFbulb, switchImage: Offswitch, bulbClass: 'bulbOff'})
 
@@ -27,7 +28,6 @@ class Lightbulb extends Component {
     }
     else {
       this.setState({bulbImage: ONbulb, switchImage: ONswitch, bulbClass: 'bulbOn'})
-
     }
   }
 
@@ -35,12 +35,12 @@ class Lightbulb extends Component {
 
   render(){
     return(
-      <>
+      <div>
         <div className={'theLightDiv'} onClick = {this.handleChange}>
           <img id="bulbImage" className={this.state.bulbClass} src = {this.state.bulbImage}/>
           <img id="switchImage" src = {this.state.switchImage}/>
         </div>
-      </>
+      </div>
     )
   }
 }

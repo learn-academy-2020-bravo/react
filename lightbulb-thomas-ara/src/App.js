@@ -1,28 +1,23 @@
 import React, { Component } from 'react';
 import './App.css';
-import Lightbulb from'./Lightbulb'
+import Lightbulb from './Lightbulb.js'
 
 
 class App extends Component {
   constructor() {
     super()
-    this.state = {
-
-    }
   }
-
   render(){
     return(
-      <>
+      <div>
         <Lightbulb />
         <footer>
         Created by Thomas & Ara
         </footer>
-      </>
+      </div>
     );
   }
 }
-
 
 
 
