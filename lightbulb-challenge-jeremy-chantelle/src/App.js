@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import LightBox from './LightBox'
 import LightBulb from './LightBulb'
 import './App.css';
 
@@ -7,17 +6,22 @@ class App extends Component {
   constructor (props){
     super(props)
       this.state = {
-        switchArray : []
+        switchArray : [],
+        lightOn: false
       }
   }
 
-addingLights = () => {
-  this.setState ({switchArray: [... this.state.switchArray, < LightBulb />]})
-}
+  addingLights = () => {
+    this.setState ({
+      switchArray: [...this.state.switchArray, < LightBulb />]
+    })
+  }
 
-removingLights = () => {
-  this.setState ({switchArray: this.state.switchArray.slice(0,this.state.switchArray.length-1) })
-}
+  removingLights = () => {
+    this.setState ({
+      switchArray: this.state.switchArray.slice(0,this.state.switchArray.length-1)
+    })
+  }
 
   render() {
     return(
@@ -29,7 +33,7 @@ removingLights = () => {
         <div id="button2">
           <button onClick = {this.removingLights}>Less Light Switches</button>
         </div>
-        < LightBulb />
+          < LightBulb />
         <div>
           {this.state.switchArray}
         </div>
