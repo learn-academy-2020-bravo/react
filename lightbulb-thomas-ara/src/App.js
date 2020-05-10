@@ -15,6 +15,9 @@ class App extends Component {
     return(
       <>
         <Lightbulb />
+        <footer>
+        Created by Thomas & Ara
+        </footer>
       </>
     );
   }

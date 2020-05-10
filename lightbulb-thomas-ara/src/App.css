@@ -37,14 +37,71 @@
   }
 }
 
-body {
+/* body {
   background-color: black;
+} */
+
+/* #square {
+  background-color: black; */
+  /* width: 200px;
+  height: 200px; */
+
+/* } */
+
+#bulbImage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+
+
+
+
 }
 
-#square {
-  background-color: white;
-  width: 200px;
-  height: 200px;
-  
+#switchImage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
 
+
+}
+
+.theLightDiv{
+  margin-top:150px;
+}
+
+.bulbOn{
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  box-shadow:
+      inset 0 0 50px #fff,      /* inner white */
+      inset 20px 0 80px #f0f,   /* inner left magenta short */
+      inset -20px 0 80px #0ff,  /* inner right cyan short */
+      inset 20px 0 300px #f0f,  /* inner left magenta broad */
+      inset -20px 0 300px #0ff, /* inner right cyan broad */
+      0 0 50px #fff,            /* outer white */
+      -10px 0 80px #f0f,        /* outer left magenta */
+      10px 0 80px #0ff;         /* outer right cyan */
+}
+
+.bulbOff{
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+
+body {
+  background-color: white;
+}
+
+footer {
+  padding: 5em;
+  font-family:'Patrick Hand', cursive;
+  font-weight: 1;
+  text-align: center;
+  font-size: 40px;
+  color: black
 }
