@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import DiceRoller from './components/DiceRoller'
-import Logged from './components/Logged'
+import DiceRoller from './DiceRoller'
+import Logged from './Logged'
 import './App.css'
 
 //create a box that outputs a number
