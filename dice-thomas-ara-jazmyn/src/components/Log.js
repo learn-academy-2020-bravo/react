@@ -9,11 +9,21 @@ class Log extends Component {
     }
   };
 
-  render()  {
+  render() {
+
+    let eachItem = this.props.previousRolls.map(item => {
+      return(
+        <li>{ item }</li>
+      )
+    })
+
     return(
       <>
         <p>
-          {this.props.previousRolls}
+        <button id="clear" onClick = {this.props.clear}> Clear your Rolls!!!!!!!!</button>
+          <ul id="list">
+          { eachItem }
+          </ul>
         </p>
       </>
     )
