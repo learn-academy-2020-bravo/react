@@ -23,9 +23,18 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
+button{
+  border-radius: 20px;
+  border-width: medium;
+  border-spacing: 15px;
+}
 .App-link {
   color: #61dafb;
+}
+h3 {
+  font-size: 30px;
+  font-style: italic;
+  font-weight: bold;
 }
 
 @keyframes App-logo-spin {
