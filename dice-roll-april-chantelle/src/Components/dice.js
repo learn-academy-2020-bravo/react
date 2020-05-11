@@ -5,7 +5,7 @@ class Dice extends Component {
   render (){  
     return (
       <React.Fragment>
-        <h3>This dice roll: { this.props.currentRoll } </h3>
+         <img alt="dice face" src= { this.props.currentRoll } />
       </React.Fragment>
     );
   }
