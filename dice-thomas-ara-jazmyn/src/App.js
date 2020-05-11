@@ -40,18 +40,22 @@ class App extends Component {
   render()  {
     return(
       <>
+      <div class="row">
+          <div class="column">
           < Dice
             roll = { this.roll }
             outcome = { this.state.outcome }
             image = { this.state.rollImage}
-            clear = { this.clear }
           />
+          </div>
+          <div class = "column">
           < Log
             previousRolls = { this.state.previousRolls }
-
-
+            clear = { this.clear }
           />
-
+          </div>
+      </div>
+      <footer id= "Createes"> Created by Thomas, Ara, and Jazmyn </footer>
       </>
     )
   }

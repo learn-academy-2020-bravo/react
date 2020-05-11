@@ -1,28 +1,69 @@
-.App {
-  text-align: center;
-}
-
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+#images {
+  height: 500px;
+  width: 600px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  display: block;
+  margin: 0 auto;
+}
+.column {
+  float: left;
+  width: 50%;
 }
 
-.App-link {
-  color: #61dafb;
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#Title {
+font-family: 'Permanent Marker', cursive;
+font-size: 60px;
+text-align: center;
+background: -webkit-linear-gradient(salmon, white);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+#Instructions {
+font-family: 'Permanent Marker', cursive;
+text-align: center;
+font-size: 40px;
+background: -webkit-linear-gradient(salmon, white);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+#clear {
+  justify-content: center;
+  display: block;
+  margin: 0px auto;
+  height: 150px;
+  width: 400px;
+  font-size: 40px;
+  background-color: #DB0C0C;
+  font-family: 'Permanent Marker', cursive;
+  color: salmon;
+  border: 30px 30px 30px 30px;
+  background-image: linear-gradient(to right, black, #DB0C0C, black)
+
+}
+
+#list{
+  color: salmon;
+  font-size: 30px;
+}
+
+body{
+  background-color: black;
+}
+
+#Createes{
+  color:white;
+  text-align: center;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 30px;
+  background: -webkit-linear-gradient(salmon, white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
