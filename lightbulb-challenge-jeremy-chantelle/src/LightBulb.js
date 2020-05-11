@@ -24,6 +24,7 @@ class LightBulb extends Component {
         lightColor: onLight,
         backColor: "gray"
       })
+
     } else {
       this.setState({
         lightOn: false,
@@ -41,11 +42,11 @@ class LightBulb extends Component {
     return(
       <>
         <div
-        class = "lightswitch"         
+        class = "lightswitch"
         style = {{ backgroundColor: backColor }}
         >
-          <img src = { lightSwitchStatus } onClick = { this.lightSwitch } class = "switch"/>
-          <img src ={ lightColor } class = "bulb"/>
+          <img alt="" src = { lightSwitchStatus } onClick = { this.lightSwitch } class = "switch"/>
+          <img alt="" src ={ lightColor } class = "bulb"/>
         </div>
       </>
     )

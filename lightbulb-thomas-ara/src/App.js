@@ -1,61 +1,74 @@
 import React, { Component } from 'react';
 import './App.css';
-import OFFbulb from './images/OFFbulb.jpg'
-import ONbulb from './images/ONbulb.jpg'
-import OFFswitch from './images/Offswitch.jpeg'
-import ONswitch from './images/ONswitch.jpg'
-
+import Lightbulb from './Lightbulb.js'
+import { Fireworks } from 'fireworks/lib/react'
 
 
 class App extends Component {
   constructor() {
     super()
     this.state = {
-        bulbImage: OFFbulb,
-        switchImage: OFFswitch,
-        switchArray: []
+      bulbOn: false,
+      // fireworkClass: 'hideFirework',
+      fxProps: {
+          count: -1,
+          interval: 500,
+          colors: ['pink', 'purple', 'blue'],
+          calc: (props, i) => ({
+            ...props,
+            x: (i + 1) * (window.innerWidth / 3) - (i + 1) * 100,
+            y: 200 + Math.random() * 100 - 50 + (i === 2 ? -80 : 0)
+          })
+      }
     }
   }
 
-  addSwitch = () => {
-    this.setState({switchArray: [...this.state.switchArray, this.state.switchImage]})
-    console.log(this.state.switchArray)
-  }
-
-  deleteSwitch = () =>  {
-    this.setState({switchArray: this.state.switchArray.slice(0,this.state.switchArray.length - 1)})
-    console.log(this.state.switchArray)
-  }
-
-  handleChange = () => {
-    if(this.state.bulbImage === ONbulb) {
-      this.setState({bulbImage: OFFbulb})
-      this.setState({switchImage: OFFswitch})
-      this.setState({switchArray: this.state.switchArray.map(x => OFFswitch)})
+  bulbHandler = () =>{
+    // toggle bulb state because switch was clicked
+    var currentBulbState = this.state.bulbOn;
+    this.setState({bulbOn: !this.state.bulbOn})
+    currentBulbState = !this.state.bulbOn;
+    // hide/show fireworks depending on bulb on/off
+    if (currentBulbState){
+      var fireworkProps = {
+                count: 3,
+                interval: 500,
+                colors: ['pink', 'purple', 'blue'],
+                calc: (props, i) => ({
+                  ...props,
+                  x: (i + 1) * (window.innerWidth / 3) - (i + 1) * 100,
+                  y: 200 + Math.random() * 100 - 50 + (i === 2 ? -80 : 0)
+                })
+            };
+      this.setState({fxProps: fireworkProps})
     }
-    else {
-      this.setState({bulbImage: ONbulb})
-      this.setState({switchImage: ONswitch})
-      this.setState({switchArray: this.state.switchArray.map(x => ONswitch)})
+    else{
+      var fireworkProps = {
+                count: -1,
+                interval: 500,
+                colors: ['pink', 'purple', 'blue'],
+                calc: (props, i) => ({
+                  ...props,
+                  x: (i + 1) * (window.innerWidth / 3) - (i + 1) * 100,
+                  y: 200 + Math.random() * 100 - 50 + (i === 2 ? -80 : 0)
+                })
+            };
+      this.setState({fxProps: fireworkProps})
     }
   }
 
   render(){
     return(
-      <>
-        <div className = "buttonContainer">
-          <button className = "button"  onClick = {this.addSwitch}> Add a Light Switch. </button>
-          <button className = "button"  onClick = {this.deleteSwitch}> Remove a Light Switch. </button>
-        </div>
-
-        <img src = {this.state.bulbImage}/>
-        <div onClick = {this.handleChange}> {this.state.switchArray.map(x => <img src = {x} height = "100" width = "100"/>)} </div>
-        //<img src = {this.state.switchArray} onClick = {this.handleChange}/>
-      </>
+      <div>
+        <Fireworks {...this.state.fxProps}/>
+        <Lightbulb bulbHandler={this.bulbHandler}/>
+        <footer>
+        Created by Thomas & Ara
+        </footer>
+      </div>
     );
   }
 }
-
 
 
 
