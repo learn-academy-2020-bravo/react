@@ -13,7 +13,7 @@ class Log extends Component {
     return(
       <>
         <p>
-          
+          {this.props.previousRolls}
         </p>
       </>
     )
