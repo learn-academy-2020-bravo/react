@@ -1,26 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import DiceRoller from "./components/DiceRoller.js";
+import RollTracker from "./components/RollTracker.js";
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
 
+class App extends Component{
+
+  constructor(props){
+    super(props)
+    this.state= {
+      //values go here
+      currentDiceRoll: "",
+      perviousDiceRolls: []
+    }
+  }
+  rollTheD6 = () => {
+    let randomDice = Math.ceil(Math.random() * 6)
+    this.setState({ currentDiceRoll: randomDice})
+  }
+
+
+
+    //meth heads go here
+ render() {
+  return(
+    <>
+      <button onClick= {this.rollTheD6}> Roll the d6 </button>
+      < DiceRoller currentDiceRoll= {this.state.currentDiceRoll} />
+  {/*    < RollTracker previousDiceRolls= /> */}
+    </>
+  )
+}
+}
 export default App;
