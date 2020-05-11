@@ -14,13 +14,12 @@ class Dice extends Component {
   render()  {
     return(
       <>
+      <h1 id="Title" > Dice Roller</h1>
         <p>
-          <button onClick = { this.props.roll }> Roll the Dice </button>
-          { this.props.outcome }
-          <button onClick = { this.props.clear }>Restart</button>
-
-          <img src = {this.props.image[this.props.outcome - 1]} />
+          <img id="images" src = {this.props.image[this.props.outcome - 1]} onClick = { this.props.roll }/>
         </p>
+        <br></br>
+        <p id= "Instructions"> Click the Dice to RoLL! </p>
       </>
     )
   }
