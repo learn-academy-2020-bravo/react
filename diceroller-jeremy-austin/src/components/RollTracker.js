@@ -11,8 +11,8 @@ class RollTracker extends Component{
     return(
       <>
       <div className = "previousRolls">
-        <h3> Your Previous rolls </h3>
-        <div> { eachRoll } </div>
+        
+        <div id= "rolledDice" > { eachRoll } </div>
       </div>
       </>
     )
