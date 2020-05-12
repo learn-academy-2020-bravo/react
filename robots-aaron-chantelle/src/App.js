@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Good from './robots/good'
 import Bad from './robots/bad'
-import Other from './robots/other'
+import Trump from './robots/trump'
 import './App.css';
 
 class App extends Component{
@@ -16,17 +16,29 @@ class App extends Component{
     this.setState({ userInput : event.target.value})
   }
 
+  clearInput = () =>{
+    this.setState({ userInput : ""})
+  }
+
+
     render(){
       return (
         <div>
           <h1>Robot Say, Robot Do</h1>
-          <input
+          <div id='input'>
+            <input
             value = { this.state.userInput}
             onChange = {this.handleChange}
-          />
-          <Good userInput= {this.state.userInput} />
-          <Bad userInput= {this.state.userInput}/>
-          <Other userInput= {this.state.userInput}/>
+            />
+          </div>
+          <div id='button'>
+            <button onClick= {this.clearInput}>Clear</button>
+          </div>
+          <div id='bots'>
+            <Good userInput= {this.state.userInput} />
+            <Bad userInput= {this.state.userInput}/>
+            <Trump userInput= {this.state.userInput}/>
+          </div>
         </div>
       )
     }
