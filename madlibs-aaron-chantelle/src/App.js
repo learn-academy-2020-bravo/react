@@ -1,26 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react'
+import Paragraph from './components/paragraph'
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+class App extends Component {
+  constructor(props) {
+    super(props)
+      this.state = {
+        noun: "DRAGON",
+        adj: "",
+        sport: "",
+        weather: "",
+        number: "",
+        bodyPlural: "",
+        verb1: "",
+        verb2: "",
+        verb3: ""
+      }
+  }
+  
+updateNoun = (noun) => {
+  this.setState({noun: noun})
+}
+
+  render() {
+    return (
+  
+    <div>
+      <h1>Hi</h1>
+      < Paragraph noun= { this.state.noun }/>
     </div>
-  );
+    )
+  }
 }
 
 export default App;
