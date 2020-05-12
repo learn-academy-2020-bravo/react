@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 
 const Bad = (props) => {
-
-
-
     return (
         <>
             <h2>Bad Robot</h2>

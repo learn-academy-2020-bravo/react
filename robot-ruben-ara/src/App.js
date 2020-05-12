@@ -16,38 +16,46 @@ class App extends Component {
 
 
  handleChange = (e) => {
-	this.setState({response: e.target.value, badResponse: e.target.value})
+   var responseLength = e.target.value.length;
+   var remainder = responseLength % 4 // 4 is length of 'blab'
+   var division = Math.floor(responseLength/4)
+   var badResponse = ''
+   for (var i =0; i<division; i++){
+     badResponse += 'blab'
+   }
+   badResponse += 'blab'.slice(0,remainder);
+   console.log(badResponse);
+   this.setState({response: e.target.value, badResponse: badResponse})
  }
 
 //  handleBlab = (e) => {
 // 	this.setState( {badResponse: e.target.value})
 //  }
-	
+
   render() {
 	return (
 		<>
 			<h1>Say Somthing</h1>
 			<input value = {this.state.response} onChange = {this.handleChange}></input>
-			<Good 
+			<Good
 				response = {this.state.response}
 			/>
-			<Bad 
-				
+			<Bad
 				badResponse = {this.state.badResponse}
 			 />
-			<Kanyebot 
+			<Kanyebot
 				response = {this.state.response}
 			/>
 		</>
     )
   }
-		 
-	
+
+
 
 }
 
 
-  
+
 
 
 
