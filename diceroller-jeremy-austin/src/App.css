@@ -83,6 +83,7 @@ h3 {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: 30px;
 }
 
 .previousDice {
@@ -118,14 +119,16 @@ header {
 #titlePortion {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 h4 {
   font-family: 'Almendra', serif;
   font-size: 30px;
-  max-width: 400px;
+  max-width: 330px;
   text-align: center;
   margin-top: 0px;
+  background-color: white;
 }
 
 #headerImage {

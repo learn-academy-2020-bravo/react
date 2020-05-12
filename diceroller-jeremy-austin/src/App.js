@@ -47,7 +47,7 @@ class App extends Component{
         <header>
           <div id="titlePortion">
             <h1>ESCAPE FROM FLAVORTOWN</h1>
-            <h4>DUNGEONS & DINERS & DRAGONS & DRIVE-INS & DIVES</h4>
+            <h4>DUNGEONS & DINERS & DRAGONS & DRIVE-INS<br />& DIVES</h4>
           </div>
           <img id="headerImage" src={escapePNG} />
         </header>
