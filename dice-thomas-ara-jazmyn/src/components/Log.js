@@ -2,15 +2,9 @@ import React, { Component } from 'react';
 import '../App.css';
 
 class Log extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-
-    }
-  };
-
   render() {
 
+    //each item in our array gets wrapped in a list tag.
     let eachItem = this.props.previousRolls.map(item => {
       return(
         <li>{ item }</li>
@@ -28,7 +22,6 @@ class Log extends Component {
       </>
     )
   }
-
 }
 
 export default Log;

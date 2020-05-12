@@ -15,27 +15,29 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      outcome: 7,
+      outcome: 6,
       previousRolls: [],
       rollImage: [dice1, dice2, dice3, dice4, dice5, dice6, diceface]
     }
   };
 
+  //obtain a random index to get from a picture from rollImage, and add that result to
+  //our previous rolls array.
   roll = () =>  {
-    let random = Math.floor(Math.random() * 6) + 1
-
-    this.setState({ outcome: random })
-
-    this.setState({ previousRolls: [...this.state.previousRolls, random]})
-
-
+    let random = Math.floor(Math.random() * 6)
+    this.setState({
+      outcome: random,
+      previousRolls: [...this.state.previousRolls, random + 1]
+    })
   }
+
+  //set the image to the start, clear out previous rolls array.
   clear = () => {
-    this.setState({ outcome: 7 })
-    this.setState({ previousRolls: []})
+    this.setState({
+      outcome: 6,
+      previousRolls: []
+    })
   }
-
-
 
   render()  {
     return(
@@ -59,7 +61,6 @@ class App extends Component {
       </>
     )
   }
-
 }
 
 export default App;
