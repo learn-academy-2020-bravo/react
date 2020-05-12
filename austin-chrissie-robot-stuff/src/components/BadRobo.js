@@ -6,7 +6,8 @@ class BadRobo extends Component {
       return(
         <>
         {/* calling a method and passing the information from the input */}
-        <h1>Bad Robot says, 'I CANT HEAR YOU ' is that correct?`} </h1>
+        <h1>Bad Robot</h1> 
+        <h2>"I CAN'T HEAR YOU MEEP BEEP BOOP" is that correct?</h2>
          </>
 
       )
