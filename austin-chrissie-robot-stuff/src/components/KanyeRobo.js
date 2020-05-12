@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
-import './App.css';
+
 
 class KanyeRobo extends Component {
     render() {
       return(
-      <div>
-      
-      </div>
+
+      <>
+      {/* calling a method and passing the information from the input */}
+      <h1>Good Robot says,  `Ima Let you speak but ${ (this.props.roboSpeak) } loves kanye`} </h1>
+       </>
 
       )
     }

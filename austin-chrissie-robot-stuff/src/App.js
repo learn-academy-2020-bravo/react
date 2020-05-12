@@ -6,7 +6,7 @@ import './App.css';
 
 class App extends Component {
   constructor (props) {
-    super (props) 
+    super (props)
     this.state = {
       roboSpeak: ""
     }
@@ -24,7 +24,7 @@ class App extends Component {
     render() {
       return(
       <>
-        <input 
+        <input
         value = { this.state.roboSpeak }
         //maybe parantheses???
         onChange = {this.handleChange} />
