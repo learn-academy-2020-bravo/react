@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import DiceRoller from './DiceRoller'
-import Logged from './Logged'
+import DiceRoller from './components/DiceRoller'
+import Logged from './components/Logged'
 import './App.css'
 
 //create a box that outputs a number
@@ -27,7 +27,10 @@ randomNumber = () => {
 
 }
 
+restart = () => {
+  this.setState({  logArray: ""})
 
+}
 
   render() {
   return (
@@ -35,8 +38,9 @@ randomNumber = () => {
             <h1>Dice Roller</h1>
       <DiceRoller dice={this.state.dice}/>
       <Logged log={this.state.logArray}/>
-      <button onClick={ this.randomNumber }>Generate a random number</button> 
       
+      <button onClick={ this.randomNumber }>Generate a random number</button> 
+      <button onClick= {this.restart}>restart</button>
     </>
   )
 }
