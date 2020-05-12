@@ -1,11 +1,9 @@
 import React, {Component} from 'react'
+import './../App.css';
 
 class Rolls extends Component {
     render() {
-        // let eachItem = this.props.rollingLog.map(value => {
-        //     return (<li> {value} </li>)
-        // })
-   
+       
         return(
             <>
             <ul> 

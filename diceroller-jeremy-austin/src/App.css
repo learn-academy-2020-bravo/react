@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+
 }
 
 .App-logo {
@@ -12,6 +13,12 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+.background{
+  background-image: url("./images/escape-from-flavortown-module.jpg");
+  height: 1200px;
+  width: 750px;
+}
+
 
 .App-header {
   background-color: #282c34;
@@ -31,10 +38,48 @@ button{
 .App-link {
   color: #61dafb;
 }
+h1{
+  font-family: fantasy;
+}
 h3 {
+  font-family: fantasy;
   font-size: 30px;
   font-style: italic;
   font-weight: bold;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 6em;
+}
+
+p{
+  margin-top: 1em;
+  font-weight: bold;
+  font-family: fantasy;
+  border-style: double;
+  flex-direction: column;
+  width: 3em;
+  height: 3em;
+  display: flex;
+  text-align: center;
+  font-size: 2em;
+}
+.lowerContent{
+  display: flex;
+  justify-content: space-between;
+
+
+}
+
+
+#rolledDice{
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+
+  font-size: 30px;
+  font-family: fantasy;
+  font-weight: bold;
+
 }
 
 @keyframes App-logo-spin {

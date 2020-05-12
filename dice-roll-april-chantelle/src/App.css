@@ -1,3 +1,7 @@
+body{
+  margin: 0 auto;
+}
+
 .App {
   text-align: center;
 }
@@ -5,6 +9,23 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+img{
+  width: 400px;
+}
+
+#dice{
+  width: 45%;
+  background-color: yellow;
+  float: left;
+  margin: 0 auto;
+}
+
+#log{
+  width: 45%;
+  background-color: red;
+  float: left;
+  margin: 0 auto;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -27,6 +48,8 @@
 .App-link {
   color: #61dafb;
 }
+
+
 
 @keyframes App-logo-spin {
   from {

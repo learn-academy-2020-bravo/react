@@ -5,7 +5,7 @@ class DiceRoller extends Component{
   render(){
     return(
       <>
-          <h3> { this.props.currentDiceRoll }</h3>
+          <p id="diceBox" onClick= {this.props.rollTheD6}> { this.props.currentDiceRoll }</p>
       </>
 
     )
