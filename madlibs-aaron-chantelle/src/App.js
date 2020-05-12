@@ -6,7 +6,7 @@ class App extends Component {
   constructor(props) {
     super(props)
       this.state = {
-        noun: "DRAGON",
+        noun: "",
         adj: "",
         sport: "",
         weather: "",
@@ -22,11 +22,21 @@ updateNoun = (noun) => {
   this.setState({noun: noun})
 }
 
+handleChange = (e) => {
+  // a method that will take a value from an input and save it in the state key "noun" **this updates in real-time**
+  this.setState({noun: e.target.value})
+}
+
+
   render() {
     return (
   
     <div>
-      <h1>Hi</h1>
+      <h1>Mad Libs Challenge!!</h1>
+      <input type="noun"
+        value = { this.noun }
+        onChange= {this.handleChange}
+      />
       < Paragraph noun= { this.state.noun }/>
     </div>
     )
