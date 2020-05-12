@@ -11,9 +11,9 @@ class App extends Component {
       roboSpeak: ""
     }
   }
-  updateRobo = (speech) => {
+  updateRobo = (roboSpeak) => {
     //if problems check here!!!!!!!!!!!!
-    this.setState ({value: "speech"})
+    this.setState ({value: roboSpeak})
   }
   handleChange = (e) => {
     this.setState({
@@ -28,9 +28,12 @@ class App extends Component {
         value = { this.state.roboSpeak }
         //maybe parantheses???
         onChange = {this.handleChange} />
-        <GoodRobo />
+        <GoodRobo 
+        roboSpeak = { this.state.roboSpeak }/>
+        {/*BadRobo needs to show it's string on input*/}
         <BadRobo />
-        <KanyeRobo />
+        <KanyeRobo
+        roboSpeak = { this.state.roboSpeak } />
       </>
 
       )

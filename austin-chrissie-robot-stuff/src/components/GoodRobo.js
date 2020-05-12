@@ -6,7 +6,8 @@ class GoodRobo extends Component  {
       return (
         <>
         {/* calling a method and passing the information from the input */}
-        <h1>Good Robot says, { `I hear you saying ${ (this.props.roboSpeak) } is that correct?`} </h1>
+        <h1>Good Robot </h1>
+        <h2> { `I hear you saying, ${ (this.props.roboSpeak) }, is that correct?`} </h2>
          </>
       )
     }
