@@ -1,26 +1,46 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
+import Good from './robots/good'
+import Bad from './robots/bad'
+import Trump from './robots/trump'
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+class App extends Component{
+  constructor(props){
+    super(props)
+    this.state = {
+      userInput:""
+    }
+  }
 
+  handleChange = (event) =>{
+    this.setState({ userInput : event.target.value})
+  }
+
+  clearInput = () =>{
+    this.setState({ userInput : ""})
+  }
+
+
+    render(){
+      return (
+        <div>
+          <h1>Robot Say, Robot Do</h1>
+          <div id='input'>
+            <input
+            value = { this.state.userInput}
+            onChange = {this.handleChange}
+            />
+          </div>
+          <div id='button'>
+            <button onClick= {this.clearInput}>Clear</button>
+          </div>
+          <div id='bots'>
+            <Good userInput= {this.state.userInput} />
+            <Bad userInput= {this.state.userInput}/>
+            <Trump userInput= {this.state.userInput}/>
+          </div>
+        </div>
+      )
+    }
+}
 export default App;

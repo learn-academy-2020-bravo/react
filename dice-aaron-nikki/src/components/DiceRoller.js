@@ -3,10 +3,30 @@ import React, { Component } from 'react'
 class DiceRoller extends Component {
     render() {
         return (
-            <>
-                <h3>Random dice roll</h3>
-                <p>this is our current roll: { this.props.dice }</p>
-            </>
+            <div
+                style={{
+                    backgroundImage: "url(" + "https://upload.wikimedia.org/wikipedia/commons/d/d6/Craps.svg" + ")",
+                    backgroundPosition: 'center',
+                    backgroundSize: 'cover',
+                    backgroundRepeat: 'no-repeat',
+                    width: 'auto',
+                    height: 'autopx',
+                    margin: 'auto',
+                    border: '5px solid #ccc',
+                    padding: '10rem'
+                    
+                }}
+            >
+                <h1 style={{
+                   textAlign: 'center',
+                   fontSize: '2rem',
+        
+                    }}>Random dice roll</h1>
+                <p style={{
+                    color: 'black',
+                    
+                }}>this is our current roll: { this.props.dice }</p>
+            </div>
         )
     }
 }
