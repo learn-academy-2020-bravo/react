@@ -7,7 +7,8 @@ class KanyeRobo extends Component {
 
       <>
       {/* calling a method and passing the information from the input */}
-      <h1>Good Robot says,  `Ima Let you speak but ${ (this.props.roboSpeak) } loves kanye`} </h1>
+      <h1>Kanye Robot</h1> 
+      <h2>{`Imma let you speak, but ${ (this.props.roboSpeak) } loves Kanye like Kanye loves Kayne`} ! </h2>
        </>
 
       )
