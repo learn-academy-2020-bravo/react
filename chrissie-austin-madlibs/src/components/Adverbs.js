@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 
 
-class Adverbs extends Component {
-  render(){
+const Adverbs = (props) => {
     return (
       <>
-
+        <input
+        value= {props.adverbs}/> An Adverb
 
       </>
   )
-}
+
 }
 
 export default Adverbs;

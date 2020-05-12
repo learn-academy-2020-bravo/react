@@ -21,20 +21,34 @@ class App extends Component {
     this.setState({value: e.target.value});
     };
   handleFormSubmit = (e) => {
-    event.preventDefault();
+    e.preventDefault();
     };
-}
+
   render () {
     return (
       <>
+        <header/>
         {/* text inputs for each*/}
-          <Nouns /> 
+        <body>
+          <Nouns />
+          <br/>
+          <Nouns />
+          <br/>
+          <Nouns />
+          <br/>
           <Adjectives />
+          <br/>
           <Adverbs />
+          <br/>
           <Verbs />
+          <br/>
           <Pronouns />
+          <br/>
+          <button type ="submit" id="button"> Submit </button>
+        </body >
       </>
-   
-  )}
+
+  )
+}
 }
 export default App;

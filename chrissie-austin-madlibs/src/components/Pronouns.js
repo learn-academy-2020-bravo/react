@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 
 
-class Pronouns extends Component {
-
-  render(){
-    return (
+const Pronouns = (props) => {
+  return(
       <>
+
+        <input
+          value= {props.pronoun}/> A Pronoun
 
       </>
   )
 }
-}
+
 
 export default Pronouns;

@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 
 
-class Adjectives extends Component {
-
-
-  render(){
-    return (
+const Adjectives = (props) => {
+  return(
       <>
+
+        <input
+          value= {props.adjectives}/> An Adjective
 
       </>
   )
-}
+
 }
 
 export default Adjectives;
