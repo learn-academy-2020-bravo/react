@@ -5,7 +5,7 @@ const Pronouns = (props) => {
   return(
       <>
 
-        <input
+        <input onChange = {props.handleChange}
           value= {props.pronoun}/> A Pronoun
 
       </>
