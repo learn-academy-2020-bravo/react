@@ -2,19 +2,13 @@ import React, { Component } from 'react';
 
 
 const Nouns = (props) => {
-
+  render()
     return (
       <>
-        <header> </header>
-        <body>
         <input
-          value= {props.noun}
-         </body>
-
+          value= {props.noun}/>
 
       </>
-  )
-}
-}
+  )}
 
 export default Nouns;

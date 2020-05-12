@@ -6,8 +6,6 @@ class Verbs extends Component {
   render(){
     return (
       <>
-        <header> </header>
-        <body> </body>
 
 
       </>

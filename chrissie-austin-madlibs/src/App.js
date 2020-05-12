@@ -7,43 +7,34 @@ import Pronouns from './components/Pronouns.js'
 import './App.css';
 
 class App extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
-      this.state ={
-        noun: noun,
-        adverb: adverb,
-        adjective: adjective,
-        verb: verb,
-        pronoun: pronoun,
+      this.state = {
+        noun: "",
+        adverb: "",
+        adjective: "",
+        verb: "",
+        pronoun: "",
       };
-
-      handleChange(e) {
-        this.setState({value: e.target.value});
-      };
-      handleSubmit(e) {
-        alert('Your madlib is: ' + this.state.value)
-      };
-
-
-
 }
-
-  render(){
-  return (
-    <>
-        <header> </header>
-        <body/>
+  handleChange = (e) => {
+    this.setState({value: e.target.value});
+    };
+  handleFormSubmit = (e) => {
+    event.preventDefault();
+    };
+}
+  render () {
+    return (
+      <>
         {/* text inputs for each*/}
-        <Nouns /> <input type="text" name="Nouns">
-        <Adjectives input type="text" name="Adjectives" />
-        <Adverbs input type="text" name="Adverbs" />
-        <Verbs input type="text" name="Verbs" />
-        <Pronouns input type="text" name="Pronouns" />
-
-    </>
+          <Nouns /> 
+          <Adjectives />
+          <Adverbs />
+          <Verbs />
+          <Pronouns />
+      </>
+   
   )}
-
-
-
 }
 export default App;
