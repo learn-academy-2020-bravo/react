@@ -1,12 +1,18 @@
 import React, { Component } from 'react';
 
 class DiceLog extends Component {
-  
   render (){  
+    let rolled = this.props.rollLog.map(number => {
+      return(
+      <li> { number } </li>
+      )
+    })
     return (
       <React.Fragment>
-         <h4>Dice Log: { this.props.rollLog }</h4>
-
+         <p class="dicelog">Dice Log:</p>
+          <ul>
+            <li> {rolled} </li>
+          </ul>
       </React.Fragment>
     );
   }
