@@ -5,7 +5,11 @@ class DiceRoller extends Component{
   render(){
     return(
       <>
-          <p id="diceBox" onClick= {this.props.rollTheD6}> { this.props.currentDiceRoll }</p>
+        <div id="diceRollerBody">
+          <div id="diceBox" onClick= {this.props.rollTheD6}> <img src={ this.props.currentDiceRoll } className= "diceImage"/> </div>
+          <h3 id="diceCaption">CLICK GUY TO ROLL</h3>
+          <button id="clearButton" onClick = { this.props.clearDice }>CLEAR ME!</button>
+        </div>
       </>
 
     )
