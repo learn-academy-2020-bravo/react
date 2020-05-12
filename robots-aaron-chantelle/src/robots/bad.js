@@ -2,8 +2,9 @@ import React from 'react'
 
 const Bad = (props) => {
 
-    let blahbinator = (i) =>{
-        let inputArray = i.split()
+    let blahbinator = (userInput) =>{
+        let inputArray = userInput.split("")
+        console.log(inputArray)
         
         let blaArray = inputArray.map((value, index) => {
             if(index%3 === 0){
@@ -21,8 +22,8 @@ const Bad = (props) => {
 
     return (
         <>
-        <h2>Bad Robot</h2>
-            {blahbinator (props.userInput)}
+        <h2>Badbot</h2>
+        <p>I heard you say {blahbinator (props.userInput)}</p>
         </>
     )
 }

@@ -4,8 +4,8 @@ const Good = (props) => {
 
     return (
         <>
-        <h2>Good Robot</h2>
-            {props.userInput}
+        <h2>Goodbot</h2>
+            <p>I heard you say {props.userInput}</p>
         </>
     )
 }
