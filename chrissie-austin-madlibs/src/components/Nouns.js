@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 
 
 const Nouns = (props) => {
-  render()
-    return (
+  return(
       <>
+
         <input
-          value= {props.noun}/>
+          value= {props.noun}/> A Noun
+          
 
       </>
   )}

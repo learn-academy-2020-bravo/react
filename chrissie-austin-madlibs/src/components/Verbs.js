@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 
 
-class Verbs extends Component {
-
-  render(){
-    return (
+const Verbs = (props) => {
+  return(
       <>
 
+        <input
+          value= {props.verbs}/> A Verb
 
       </>
   )
-}
+
 }
 
 export default Verbs;

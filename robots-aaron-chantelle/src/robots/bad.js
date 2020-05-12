@@ -1,4 +1,6 @@
 import React from 'react'
+import badbot from '../images/badbot.png'
+
 
 const Bad = (props) => {
 
@@ -22,8 +24,11 @@ const Bad = (props) => {
 
     return (
         <>
-        <h2>Badbot</h2>
-        <p>I heard you say {blahbinator (props.userInput)}</p>
+        <div id='badbot'>
+            <img src= {badbot}/>
+            <h2>Badbot</h2>
+            <p>I heard you say {blahbinator (props.userInput)}</p>
+        </div>
         </>
     )
 }

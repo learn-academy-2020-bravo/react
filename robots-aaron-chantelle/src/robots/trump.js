@@ -1,6 +1,7 @@
 import React from 'react'
+import trumpbot from '../images/trumpbot.png'
 
-const Other = (props) => {
+const Trump = (props) => {
 
     let trumpinator = (userInput) =>{
         let inputArray = userInput.split("")
@@ -127,9 +128,12 @@ const Other = (props) => {
 
     return (
         <>
+        <div id='trumpbot'>
+        <img src= {trumpbot}/>
         <h2>Trumpbot</h2>
         <p>I heard you say {trumpinator (props.userInput)}</p>
+        </div>
         </>
     )
 }
-export default Other
+export default Trump
