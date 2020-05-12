@@ -17,13 +17,13 @@ class App extends Component {
 
  handleChange = (e) => {
    var responseLength = e.target.value.length;
-   var remainder = responseLength % 4 // 4 is length of 'blab'
-   var division = Math.floor(responseLength/4)
+   var remainder = responseLength % 3 // 4 is length of 'blab'
+   var division = Math.floor(responseLength/3)
    var badResponse = ''
    for (var i =0; i<division; i++){
-     badResponse += 'blab'
+     badResponse += 'bla'
    }
-   badResponse += 'blab'.slice(0,remainder);
+   badResponse += 'bla'.slice(0,remainder);
    console.log(badResponse);
    this.setState({response: e.target.value, badResponse: badResponse})
  }
