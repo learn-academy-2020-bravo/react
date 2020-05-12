@@ -7,58 +7,79 @@ class App extends Component{
   constructor(props){
     super(props)
     this.state = {
-      noun: "",
+    fieldName:"",
+      nounOne: "",
       verb: "",
       nounTwo: "",
       nounThree: "",
       adjective: "",
       verbTwo: "",
       adjectiveTwo: "",
-      nounFour: ""
+      nounFour: "",
+      madLib:""
     }
   }
+  handleChange = event => {
+    const {name,value} = event.target
+    //const name = event.target.name
+    //const value = event.target.value
+    //more logic here as per the requirement
+    this.setState({
+        [name]: event.target.value,
+    });
+};
+// {this.state.verb}
+  // updateNoun = (name) => {
+  //   this.setState({ noun: name})
+  // }
 
-  updateNoun = (name) => {
-    this.setState({ noun: name})
-  }
+  // updateVerb = (name) => {
+  //   this.setState({ verb: name})
+  // }
 
-  updateVerb = (name) => {
-    this.setState({ verb: name})
-  }
+  // updateNounTwo = (name) => {
+  //   this.setState({ nounTwo: name})
+  // }
 
-  updateNounTwo = (name) => {
-    this.setState({ nounTwo: name})
-  }
+  // updateNounThree = (name) => {
+  //   this.setState({ nounThree: name})
+  // }
 
-  updateNounThree = (name) => {
-    this.setState({ nounThree: name})
-  }
+  // updateAdjective = (name) => {
+  //   this.setState({ adjective: name})
+  // }
 
-  updateAdjective = (name) => {
-    this.setState({ adjective: name})
-  }
+  // updateVerbTwo = (name) => {
+  //   this.setState({ verbTwo: name})
+  // }
 
-  updateVerbTwo = (name) => {
-    this.setState({ verbTwo: name})
-  }
+  // updateAdjectiveTwo = (name) => {
+  //   this.setState({ adjectiveTwo: name})
+  // }
 
-  updateAdjectiveTwo = (name) => {
-    this.setState({ adjectiveTwo: name})
-  }
-
-  updateNounFour = (name) => {
-    this.setState({ nounFour: name})
-  }
+  // updateNounFour = (name) => {
+  //   this.setState({ nounFour: name})
+  // }
+   createMadLib = () => {
+      this.setState({ madLib: `I am going to take my${this.state.nounOne}` })
+   }
 
   render() {
     return (
       <>
+      {/* add container (div className='container')\
+      - class = className
+      - anytime you have text, wrap in a h1-6, p or span tag
+      - instead of br, use margins and padding in your css
+      - look into creating block element with css (display:block)
+      */}
       <div class="row">
         <div class="column">
           Noun:
           <UserInput
-            name={this.state.noun}
-            updateName={ this.updateNoun}
+            value={this.state.noun}
+            handleChange={ this.handleChange}
+            fieldName="nounOne"
           />
           <br></br>
           Verb:
@@ -104,30 +125,8 @@ class App extends Component{
           />
         </div>
         <div class="column">
-        <Word
-          name={this.state.noun}
-        />
-        <Word
-          name={this.state.verb}
-        />
-        <Word
-          name={this.state.nounTwo}
-        />
-        <Word
-          name={this.state.nounThree}
-        />
-        <Word
-          name={this.state.adjective}
-        />
-        <Word
-          name={this.state.verbTwo}
-        />
-        <Word
-          name={this.state.adjectiveTwo}
-        />
-        <Word
-          name={this.state.nounFour}
-        />
+          <button onClick= {this.createMadLib}> Submit </button>
+          {this.state.madLib}
         </div>
       </div>
       </>

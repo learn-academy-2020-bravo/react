@@ -2,15 +2,14 @@ import React, { Component } from 'react'
 
 class UserInput extends Component {
 
-  handleChange = (event) => {
-    this.props.updateName(event.target.value)
-  }
+
 
   render() {
     return (
       <input
-        value={ this.props.name }
-        onChange={ this.handleChange }
+        value={ this.props.value }
+        onChange={ this.props.handleChange }
+        name = {this.props.fieldName}
       />
     )
   }
