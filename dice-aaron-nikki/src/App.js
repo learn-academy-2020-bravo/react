@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import DiceRoller from './DiceRoller'
-import Logged from './Logged'
+import DiceRoller from './components/DiceRoller'
+import Logged from './components/Logged'
 import './App.css'
 
 
@@ -22,8 +22,13 @@ randomNumber = () => {
 }
 
 restart = () => {
+<<<<<<< HEAD
   this.setState({logArray: []}) //clears the log of numbers
   this.setState({dice: ''}) //clear the currently rolled number
+=======
+  this.setState({  logArray: ""})
+
+>>>>>>> 6dde61605f0dc32f7d04b9b913ea2d195f28f4c3
 }
 
   render() {
@@ -42,6 +47,7 @@ restart = () => {
 
       <DiceRoller dice={this.state.dice}/>
       <Logged log={this.state.logArray}/>
+<<<<<<< HEAD
       <button onClick={ this.randomNumber } style={{
         font: 'inherit',
         cursor: 'pointer',
@@ -63,6 +69,12 @@ restart = () => {
       }}
       >DELETE DICE COUNT</button> 
     </div>
+=======
+      
+      <button onClick={ this.randomNumber }>Generate a random number</button> 
+      <button onClick= {this.restart}>restart</button>
+    </>
+>>>>>>> 6dde61605f0dc32f7d04b9b913ea2d195f28f4c3
   )
 }
 }

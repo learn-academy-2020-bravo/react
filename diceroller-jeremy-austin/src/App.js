@@ -2,7 +2,15 @@ import React, { Component } from 'react';
 import DiceRoller from "./components/DiceRoller";
 import RollTracker from "./components/RollTracker";
 import './App.css';
-import Escape from './images/escape-from-flavortown-module.jpg'
+import escape from './images/escape-from-flavortown-module.jpg'
+import dice1 from './images/guy1.png'
+import dice2 from './images/guy2.png'
+import dice3 from './images/guy3.png'
+import dice4 from './images/guy4.png'
+import dice5 from './images/guy5.png'
+import dice6 from './images/guy6.png'
+import diceStart from './images/guystart.png'
+import escapePNG from './images/escapeimage.png'
 
 
 class App extends Component{
@@ -11,43 +19,50 @@ class App extends Component{
     super(props)
     this.state= {
       //values go here
-      currentDiceRoll: "",
+      diceFaces: [dice1, dice2, dice3, dice4, dice5, dice6],
+      currentDiceRoll: diceStart,
       previousDiceRolls: []
     }
   }
   rollTheD6 = () => {
-    let randomDice = Math.ceil(Math.random() * 6)
+    let randomNum = Math.floor(Math.random() * 6)
     this.setState({
-      currentDiceRoll: randomDice,
+      currentDiceRoll: this.state.diceFaces[randomNum],
       previousDiceRolls: [...this.state.previousDiceRolls, this.state.currentDiceRoll]
     })
   }
 
-
-
+  clearDice = () => {
+    this.setState({
+      currentDiceRoll: diceStart,
+      previousDiceRolls: []
+    })
+  }
 
     //methods go here
  render() {
   return(
     <>
       <div className= "background">
-        <h1>Roll The Dice------------------Your Previous rolls </h1>
-
-          <button onClick= {this.rollTheD6}> Roll the d6 </button>
-      
+        <header>
+          <div id="titlePortion">
+            <h1>ESCAPE FROM FLAVORTOWN</h1>
+            <h4>DUNGEONS & DINERS & DRAGONS & DRIVE-INS<br />& DIVES</h4>
+          </div>
+          <img id="headerImage" src={escapePNG} />
+        </header>
           <div className= "lowerContent">
             <div className= "dice">
-            < DiceRoller rollTheD6= {this.rollTheD6} currentDiceRoll= {this.state.currentDiceRoll}  />
-          </div>
-
-
-                <div className= "list">
-
-                  < RollTracker
-                  previousDiceRolls = { this.state.previousDiceRolls }
-                  />
-                </div>
-          </div>
+              < DiceRoller rollTheD6= {this.rollTheD6} currentDiceRoll= {this.state.currentDiceRoll}
+              clearDice = { this.clearDice }
+              />
+            </div>
+            <div className= "list">
+              < RollTracker
+              previousDiceRolls = { this.state.previousDiceRolls }
+              />
+            </div>
+            </div>
         </div>
     </>
   )

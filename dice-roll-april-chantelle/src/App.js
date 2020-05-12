@@ -52,14 +52,14 @@ class App extends Component {
     return (
       <React.Fragment>
         <div id="main">
-          <h1>Dice Roller </h1>
-          <div id="dice">
-          <button onClick = { this.rollDice }>Roll The Dice</button>
-          <Dice currentRoll = { this.state.currentRoll } />
+          <h1>Face Roller </h1>
+          <div id="fullwidth">
+            <button onClick = { this.rollDice }>Roll The Dice</button>
+            <button onClick = {this.reset}>Reset</button>
           </div>
-          <div id="log">
-              <button onClick = {this.reset}>Reset</button>
-              <DiceLog rollLog = {this.state.rollLog} />
+          <div id="columns">
+            <div><Dice currentRoll = { this.state.currentRoll } /></div>
+            <div><DiceLog rollLog = {this.state.rollLog} /></div>
           </div>
         </div>
       </React.Fragment>
