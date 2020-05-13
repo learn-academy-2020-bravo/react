@@ -1,3 +1,14 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
-class Madlib
+
+const Madlib = (props) => {
+  return(
+      <>
+
+   
+      </>
+  )
+
+}
+
+export default Madlib;

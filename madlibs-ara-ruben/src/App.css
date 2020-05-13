@@ -1,12 +1,45 @@
-/* body {
-  background-color: aquamarine;
-} */
-.flex-container {
+
+body {
+  background-color: #000 !important;
+  color: white !important;
+  font-family: "Fontdiner Swanky";
+  font-size: 1.5em;
+}
+
+label {
+  font-family: "Fontdiner Swanky" !important;
+}
+
+
+/* .flex-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-}
+  justify-content: space-around;
 
-.items {
+} */
+
+/* .items {
   flex: auto;
-}
+
+
+} */
+
+/* .column {
+  float: left;
+  width: 50%;
+} */
+
+/* Clear floats after the columns */
+/* .row:after {
+  content: "";
+  display: table;
+  clear: both;
+} */
+
+
+/* @media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+} */
