@@ -34,7 +34,7 @@ class App extends Component {
   handleClear = () => {
     console.log("hi!");
 
-    this.setState({paragraph: this.state.paragraph, location:"", famousPerson:"", adjective: "", sound:"", animal1:"", animal2:""})
+    this.setState({paragraph:'', location:"", famousPerson:"", adjective: "", sound:"", animal1:"", animal2:""})
   }
 
 
@@ -101,8 +101,8 @@ class App extends Component {
             </div>
             <br />
             <div className="items">
-              <button type="button" class="btn btn-light" style={{margiRight: '0.8rem' }} onClick={this.handleFormSubmit}>Submit</button>
-              <button type="button" class="btn btn-light" style={{marginLeft: '0.8rem' }}onClick={this.handleClear}>Clear</button>
+              <button type="button" className="btn btn-light" style={{margiRight: '0.8rem' }} onClick={this.handleFormSubmit}>Submit</button>
+              <button type="button" className="btn btn-light" style={{marginLeft: '0.8rem' }}onClick={this.handleClear}>Clear</button>
             </div>
           </div>
           <div className="col text-center">
