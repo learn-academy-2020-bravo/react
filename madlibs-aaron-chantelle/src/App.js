@@ -36,10 +36,14 @@ changeStory = () => {
   this.setState( {showStory: true} )
 }
 
-clearStory = (e) => {
- var form = Object.assign({}, this.state.form);
-       Object.keys(form).map((key, index) => {
-          form[key] = "" ;
+//Object.assign- copies the values of all enumberable own properties.. from one or more source objects to a target object.. useful for merging objects or cloning
+//Object.keys(obj)- method returns an array of a given objects own enumberable property names, iterated in the same order that a normal loop would.. 
+//so in this case we were able to apply the map function to iterate over the objects names and clearing its values in this case.
+
+clearStory = () => {
+ let form = Object.assign({}, this.state.form);
+       Object.keys(form).map((name, index) => {
+          form[name] = "" ;
         });
 
        this.setState({form})
