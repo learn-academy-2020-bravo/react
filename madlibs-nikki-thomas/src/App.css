@@ -1,11 +1,87 @@
-.column {
-  float: left;
-  width: 50%;
+.container {
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 900px;
 }
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
+.row {
+  width: 100%;
+}
+
+.column {
+  float: left;
+  padding: 15px;
+  text-align: center;
+  height: 700px;
+}
+
+.center {
+  text-align: center;
+  height: 130px;
+}
+
+.left {
+  width: 17%;
+}
+
+.middle {
+  width: 23%;
+  margin-top:.6em;
+}
+
+.right {
+  width: 50%;
+  background-color: #F0F8FF;
+}
+
+.half {
+  width: 50%;
+  height: 100px;
+}
+
+.inputField {
+  height: 40px;
+  font-size: 28px;
+}
+
+.buttonOne {
+  margin-left: -65px;
+}
+
+.buttonTwo {
+  margin-left: -50px;
+}
+
+p {
+  display: block;
+  margin-top: 1.8em;
+  font-size: 28px;
+}
+
+button {
+  font-size: 28px;
+  width: 150px;
+  height: 70px;
+}
+
+h1 {
+  text-decoration: underline;
+  font-family: "Georgia";
+  font-size: 80px;
+  margin-top: .2em;
+}
+
+.inputMargin {
+  margin-top: 1.3em;
+}
+
+.story {
+  font-size: 35px;
+}
+
+.right:after {
+  content: '';
   display: table;
   clear: both;
 }

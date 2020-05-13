@@ -38,12 +38,12 @@ class App extends Component{
       verbTwo: "",
       adjectiveTwo: "",
       nounFour: "",
-      madLib:""
+      madLib:"",
     })
   }
 
    createMadLib = () => {
-      this.setState({ madLib: `I am going to take my ${this.state.nounOne} ${this.state.verb} the ${this.state.nounTwo} while on the ${this.state.nounThree}.  I'm having a ${this.state.adjective} day.  Let's go ${this.state.verbTwo}.  Let's have a ${this.state.adjectiveTwo} ${this.state.nounFour}.`})
+      this.setState({ madLib: `It was a cold November ${this.state.nounOne}. I woke up and ${this.state.verb} to the kitchen.  My favorite ${this.state.nounTwo} was cooking on the stove.  I thought to myself, "I think I'll add some ${this.state.nounThree} to the dish".  I thought it was a very ${this.state.adjective} meal.  After breakfast, I think I'll  ${this.state.verbTwo} down to the docks.  I was having a ${this.state.adjectiveTwo} journey, until I tripped over a  ${this.state.nounFour}.`})
    }
 
   render() {
@@ -55,60 +55,84 @@ class App extends Component{
       - instead of br, use margins and padding in your css
       - look into creating block element with css (display:block)
       */}
-      <div class="row">
-        <div class="column">
-          Noun:
-          <UserInput
-            handleChange={ this.handleChange}
-            fieldName="nounOne"
-          />
-          <br></br>
-          Verb:
-          <UserInput
-          handleChange={ this.handleChange}
-          fieldName="verb"
-          />
-          <br></br>
-          Noun:
-          <UserInput
-          handleChange={ this.handleChange}
-          fieldName="nounTwo"
-          />
-          <br></br>
-          Noun:
-          <UserInput
-          handleChange={ this.handleChange}
-          fieldName="nounThree"
-          />
-          <br></br>
-          Adjective:
-         <UserInput
-         handleChange={ this.handleChange}
-         fieldName="adjective"
-          />
-          <br></br>
-          Verb:
-         <UserInput
-         handleChange={ this.handleChange}
-         fieldName="verbTwo"
-          />
-          <br></br>
-          Adjective:
-         <UserInput
-         handleChange={ this.handleChange}
-         fieldName="adjectiveTwo"
-          />
-          <br></br>
-          Noun:
-         <UserInput
-         handleChange={ this.handleChange}
-         fieldName="nounFour"
-          />
+      <div className="container">
+        <div className="row">
+          <div className="center">
+            <h1> Mad Libs </h1>
+          </div>
         </div>
-        <div class="column">
+        <div className="row">
+          <div className="column left">
+            <p>Noun: </p>
+            <p>Verb: </p>
+            <p>Noun: </p>
+            <p>Noun: </p>
+            <p>Adjective: </p>
+            <p>Verb: </p>
+            <p>Adjective: </p>
+            <p>Noun: </p>
+          </div>
+          <div className="column middle">
+            <p className="inputMargin">
+              <UserInput
+                handleChange={ this.handleChange}
+                fieldName="nounOne"
+              />
+            </p>
+            <p className="inputMargin">
+              <UserInput
+              handleChange={ this.handleChange}
+              fieldName="verb"
+              />
+            </p>
+            <p className="inputMargin">
+              <UserInput
+              handleChange={ this.handleChange}
+              fieldName="nounTwo"
+              />
+            </p>
+            <p className="inputMargin">
+              <UserInput
+              handleChange={ this.handleChange}
+              fieldName="nounThree"
+              />
+            </p>
+            <p className="inputMargin">
+              <UserInput
+               handleChange={ this.handleChange}
+               fieldName="adjective"
+              />
+            </p>
+            <p className="inputMargin">
+              <UserInput
+               handleChange={ this.handleChange}
+               fieldName="verbTwo"
+              />
+            </p>
+            <p className="inputMargin">
+              <UserInput
+               handleChange={ this.handleChange}
+               fieldName="adjectiveTwo"
+              />
+            </p>
+            <p className="inputMargin">
+              <UserInput
+               handleChange={ this.handleChange}
+               fieldName="nounFour"
+              />
+            </p>
+          </div>
+          <div className="column right">
+            <p className="story">{this.state.madLib}</p>
+          </div>
+        </div>
+      </div>
+      <div className="row">
+        <div className="column half buttonOne">
           <button onClick= {this.createMadLib}> Submit </button>
+        </div>
+        <div className="column half buttonTwo">
           <button onClick= {this.clear}> Clear </button>
-          {this.state.madLib}
         </div>
       </div>
       </>

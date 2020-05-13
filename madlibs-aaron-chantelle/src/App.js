@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import Paragraph from './components/paragraph'
+import paper from './images/paper.png'
 import './App.css';
+
 
 class App extends Component {
   constructor(props) {
@@ -25,18 +27,34 @@ handleChange = (e) => {
   this.state.form[e.target.name] = e.target.value
   // accesses the nested object in state, we destructure form based off the input name, so each name matches the value where it should be updating in state
   //once targeted the the "event" gives us the user input that gets assigned to values in form object.. 
+  
   this.setState({form: this.state.form})
-
+  
 }
 
 changeStory = () => {
   this.setState( {showStory: true} )
 }
 
+//Object.assign- copies the values of all enumberable own properties.. from one or more source objects to a target object.. useful for merging objects or cloning
+//Object.keys(obj)- method returns an array of a given objects own enumberable property names, iterated in the same order that a normal loop would.. 
+//so in this case we were able to apply the map function to iterate over the objects names and clearing its values in this case.
+
+clearStory = () => {
+ let form = Object.assign({}, this.state.form);
+       Object.keys(form).map((name, index) => {
+          form[name] = "" ;
+        });
+
+       this.setState({form})
+
+      this.setState({showStory: false})
+}
+
   render() {
     return (
   
-    <div>
+    <div class="main">
       <h1>Mad Libs Challenge!!</h1>
       <div id="input">
         <div>
@@ -44,6 +62,7 @@ changeStory = () => {
         placeholder = "Noun"
         value = { this.state.form.noun }
         onChange= {this.handleChange}
+        onClear = {this.clearStory}
       />
       </div>
       <div>
@@ -67,38 +86,51 @@ changeStory = () => {
         onChange= {this.handleChange}
       />
       </div>
+      <div>
        <input name="number" 
         placeholder = "Number"
         value = { this.state.form.number }
         onChange= {this.handleChange}
       />
+      </div>
+      <div>
        <input name="bodyPlural" 
         placeholder = "Body Parts"
         value = { this.state.form.bodyPlural }
         onChange= {this.handleChange}
       />
+      </div>
+      <div>
        <input name="verb1" 
         placeholder = "First Verb"
         value = { this.state.form.verb1 }
         onChange= {this.handleChange}
       />
+      </div>
+      <div>
        <input name="verb2" 
         placeholder = "Second Verb"
         value = { this.state.form.verb2 }
         onChange= {this.handleChange}
       />
+      </div>
+      <div>
        <input name="verb3" 
         placeholder = "Third Verb"
         value = { this.state.form.verb3 }
         onChange= {this.handleChange}
       />
       </div>
-      
-       <button onClick = { this.changeStory }>Click here
+      </div>
+       <button id="buttonSubmit" onClick = { this.changeStory }>Submit your words!
+       </button>  
+       <img src= {paper}/>
+       <button id="buttonClear" onClick = { this.clearStory }>Redo your Mad Lib!
        </button>   
        {/* click here button is considered a truthy value when clicked on (this is called a conditional render*/}
        {this.state.showStory && < Paragraph form = {this.state.form }/>}
        {/* if both true it will render the paragraph */}
+       
     </div>
        )
   }
