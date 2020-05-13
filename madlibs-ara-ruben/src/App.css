@@ -7,4 +7,6 @@
   flex-wrap: wrap;
 }
 
-
+.items {
+  flex: auto;
+}
