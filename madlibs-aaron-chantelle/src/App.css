@@ -1,38 +1,81 @@
-.App {
+body {
+  background-color: rgba(224, 255, 255, 0.411);
+}
+
+#input {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  color: red;
+  text-align: center;
+  font-family: 'Shadows Into Light', cursive;
+}
+
+p {
+  font-family: 'Shadows Into Light', cursive;
+  text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    color: red;
+    margin-top: 3.5rem;
+    margin-left: 2.8rem;
+  }
+
+.main {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+img {
+    display: inline-block;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    width: 40%;
+    height: 30%;
+    background-position: center;
+    z-index: -1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#buttonSubmit {
+  margin-top: 2rem;
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+  box-shadow:inset 0px 1px 0px 0px #cf866c;
+	background:linear-gradient(to bottom, #d0451b 5%, #bc3315 100%);
+	background-color:#d0451b;
+	border-radius:3px;
+	border:1px solid #942911;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	font-style:italic;
+	padding:6px 19px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #854629;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#buttonClear {
+  margin-top: 2rem;
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+  box-shadow:inset 0px 1px 0px 0px #cf866c;
+	background:linear-gradient(to bottom, #d0451b 5%, #bc3315 100%);
+	background-color:#d0451b;
+	border-radius:3px;
+	border:1px solid #942911;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	font-style:italic;
+	padding:6px 19px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #854629;
 }
