@@ -5,7 +5,7 @@ const Adjectives = (props) => {
   return(
       <>
 
-        <input
+        <input onChange = {props.handleChange}
           value= {props.adjectives}/> An Adjective
 
       </>

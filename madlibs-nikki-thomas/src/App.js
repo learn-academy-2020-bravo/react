@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import Word from './components/Word'
 import './App.css';
 import UserInput from './components/UserInput'
 
@@ -7,7 +6,6 @@ class App extends Component{
   constructor(props){
     super(props)
     this.state = {
-    fieldName:"",
       nounOne: "",
       verb: "",
       nounTwo: "",
@@ -19,6 +17,7 @@ class App extends Component{
       madLib:""
     }
   }
+
   handleChange = event => {
     const {name,value} = event.target
     //const name = event.target.name
@@ -28,40 +27,23 @@ class App extends Component{
         [name]: event.target.value,
     });
 };
-// {this.state.verb}
-  // updateNoun = (name) => {
-  //   this.setState({ noun: name})
-  // }
 
-  // updateVerb = (name) => {
-  //   this.setState({ verb: name})
-  // }
+  clear = () => {
+    this.setState({
+      nounOne: "",
+      verb: "",
+      nounTwo: "",
+      nounThree: "",
+      adjective: "",
+      verbTwo: "",
+      adjectiveTwo: "",
+      nounFour: "",
+      madLib:""
+    })
+  }
 
-  // updateNounTwo = (name) => {
-  //   this.setState({ nounTwo: name})
-  // }
-
-  // updateNounThree = (name) => {
-  //   this.setState({ nounThree: name})
-  // }
-
-  // updateAdjective = (name) => {
-  //   this.setState({ adjective: name})
-  // }
-
-  // updateVerbTwo = (name) => {
-  //   this.setState({ verbTwo: name})
-  // }
-
-  // updateAdjectiveTwo = (name) => {
-  //   this.setState({ adjectiveTwo: name})
-  // }
-
-  // updateNounFour = (name) => {
-  //   this.setState({ nounFour: name})
-  // }
    createMadLib = () => {
-      this.setState({ madLib: `I am going to take my${this.state.nounOne}` })
+      this.setState({ madLib: `I am going to take my ${this.state.nounOne} ${this.state.verb} the ${this.state.nounTwo} while on the ${this.state.nounThree}.  I'm having a ${this.state.adjective} day.  Let's go ${this.state.verbTwo}.  Let's have a ${this.state.adjectiveTwo} ${this.state.nounFour}.`})
    }
 
   render() {
@@ -77,55 +59,55 @@ class App extends Component{
         <div class="column">
           Noun:
           <UserInput
-            value={this.state.noun}
             handleChange={ this.handleChange}
             fieldName="nounOne"
           />
           <br></br>
           Verb:
           <UserInput
-           name={this.state.verb}
-           updateName={ this.updateVerb}
+          handleChange={ this.handleChange}
+          fieldName="verb"
           />
           <br></br>
           Noun:
           <UserInput
-           name={this.state.nounTwo}
-           updateName={ this.updateNounTwo}
+          handleChange={ this.handleChange}
+          fieldName="nounTwo"
           />
           <br></br>
           Noun:
           <UserInput
-          name={this.state.nounThree}
-          updateName={ this.updateNounThree}
+          handleChange={ this.handleChange}
+          fieldName="nounThree"
           />
           <br></br>
           Adjective:
          <UserInput
-          name={this.state.adjective}
-          updateName={ this.updateAdjective}
+         handleChange={ this.handleChange}
+         fieldName="adjective"
           />
           <br></br>
           Verb:
          <UserInput
-          name={this.state.verbTwo}
-          updateName={ this.updateVerbTwo}
+         handleChange={ this.handleChange}
+         fieldName="verbTwo"
           />
           <br></br>
           Adjective:
          <UserInput
-          name={this.state.adjectiveTwo}
-          updateName={ this.updateAdjectiveTwo}
+         handleChange={ this.handleChange}
+         fieldName="adjectiveTwo"
           />
           <br></br>
           Noun:
          <UserInput
-          name={this.state.nounFour}
-          updateName={ this.updateNounFour}
+         handleChange={ this.handleChange}
+         fieldName="nounFour"
           />
         </div>
         <div class="column">
           <button onClick= {this.createMadLib}> Submit </button>
+          <button onClick= {this.clear}> Clear </button>
           {this.state.madLib}
         </div>
       </div>

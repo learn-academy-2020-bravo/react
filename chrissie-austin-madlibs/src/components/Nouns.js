@@ -5,7 +5,7 @@ const Nouns = (props) => {
   return(
       <>
 
-        <input
+        <input onChange = {props.handleChange}
           value= {props.noun}/> A Noun
           
 

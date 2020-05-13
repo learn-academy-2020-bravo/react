@@ -5,7 +5,7 @@ const Verbs = (props) => {
   return(
       <>
 
-        <input
+        <input onChange = {props.handleChange}
           value= {props.verbs}/> A Verb
 
       </>

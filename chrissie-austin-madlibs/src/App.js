@@ -19,17 +19,17 @@ class App extends Component {
 }
   handleChange = (e) => {
     this.setState({value: e.target.value});
+    console.log(e)
     };
+  
   handleFormSubmit = (e) => {
     e.preventDefault();
     };
-
+  
   render () {
     return (
       <>
-        <header/>
         {/* text inputs for each*/}
-        <body>
           <Nouns />
           <br/>
           <Nouns />
@@ -45,7 +45,6 @@ class App extends Component {
           <Pronouns />
           <br/>
           <button type ="submit" id="button"> Submit </button>
-        </body >
       </>
 
   )
