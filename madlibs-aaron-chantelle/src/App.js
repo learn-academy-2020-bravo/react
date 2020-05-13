@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import Paragraph from './components/paragraph'
+import paper from './images/paper.png'
 import './App.css';
+
 
 class App extends Component {
   constructor(props) {
@@ -36,7 +38,7 @@ changeStory = () => {
   render() {
     return (
   
-    <div>
+    <div class="main">
       <h1>Mad Libs Challenge!!</h1>
       <div id="input">
         <div>
@@ -67,38 +69,51 @@ changeStory = () => {
         onChange= {this.handleChange}
       />
       </div>
+      <div>
        <input name="number" 
         placeholder = "Number"
         value = { this.state.form.number }
         onChange= {this.handleChange}
       />
+      </div>
+      <div>
        <input name="bodyPlural" 
         placeholder = "Body Parts"
         value = { this.state.form.bodyPlural }
         onChange= {this.handleChange}
       />
+      </div>
+      <div>
        <input name="verb1" 
         placeholder = "First Verb"
         value = { this.state.form.verb1 }
         onChange= {this.handleChange}
       />
+      </div>
+      <div>
        <input name="verb2" 
         placeholder = "Second Verb"
         value = { this.state.form.verb2 }
         onChange= {this.handleChange}
       />
+      </div>
+      <div>
        <input name="verb3" 
         placeholder = "Third Verb"
         value = { this.state.form.verb3 }
         onChange= {this.handleChange}
       />
       </div>
-      
-       <button onClick = { this.changeStory }>Click here
+      </div>
+       <button id="buttonSubmit" onClick = { this.changeStory }>Submit your words!
+       </button>  
+       <img src= {paper}/>
+       <button id="buttonClear" onClick = { this.changeStory }>Redo your Mad Lib!
        </button>   
        {/* click here button is considered a truthy value when clicked on (this is called a conditional render*/}
        {this.state.showStory && < Paragraph form = {this.state.form }/>}
        {/* if both true it will render the paragraph */}
+       
     </div>
        )
   }
