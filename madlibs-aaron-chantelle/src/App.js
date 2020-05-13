@@ -27,12 +27,24 @@ handleChange = (e) => {
   this.state.form[e.target.name] = e.target.value
   // accesses the nested object in state, we destructure form based off the input name, so each name matches the value where it should be updating in state
   //once targeted the the "event" gives us the user input that gets assigned to values in form object.. 
+  
   this.setState({form: this.state.form})
-
+  
 }
 
 changeStory = () => {
   this.setState( {showStory: true} )
+}
+
+clearStory = (e) => {
+ var form = Object.assign({}, this.state.form);
+       Object.keys(form).map((key, index) => {
+          form[key] = "" ;
+        });
+
+       this.setState({form})
+
+      this.setState({showStory: false})
 }
 
   render() {
@@ -46,6 +58,7 @@ changeStory = () => {
         placeholder = "Noun"
         value = { this.state.form.noun }
         onChange= {this.handleChange}
+        onClear = {this.clearStory}
       />
       </div>
       <div>
@@ -108,7 +121,7 @@ changeStory = () => {
        <button id="buttonSubmit" onClick = { this.changeStory }>Submit your words!
        </button>  
        <img src= {paper}/>
-       <button id="buttonClear" onClick = { this.changeStory }>Redo your Mad Lib!
+       <button id="buttonClear" onClick = { this.clearStory }>Redo your Mad Lib!
        </button>   
        {/* click here button is considered a truthy value when clicked on (this is called a conditional render*/}
        {this.state.showStory && < Paragraph form = {this.state.form }/>}
